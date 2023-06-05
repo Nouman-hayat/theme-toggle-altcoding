@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Toggle the theme</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+    <link href="./icons/css/boxicons.css" rel="stylesheet">
+
+</head>
+
+<body class="light-theme">
+
+    <input type="checkbox" id="toggle">
+
+    <label class="toggle" for="toggle">
+        <i class="bx bxs-sun"></i>
+        <i class="bx bx-moon"></i>
+        <span class="ball"></span>
+    </label>
+
+   
+    <script>
+const body = document.querySelector("body");
+const togglebtn = document.querySelector("#toggle");
+const light = document.querySelector(".toggle .bxs-sun");
+const dark = document.querySelector(".toggle .bx-moon");
+
+togglebtn.addEventListener("change", () => {
+    
+    body.classList.toggle("dark-theme");
+    light.className = sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
+    dark.className = moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
+
+});
+    </script>
+
+</body>
+
+</html>
